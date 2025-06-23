@@ -43,6 +43,8 @@ public class QuestionService implements ChatService {
                     .param("rules", ideaRule)
             )
             .user(question.question())
+//            .advisors(advisorSpec ->
+//                advisorSpec.param(CHAT_MEMORY_RETRIEVE_SIZE_KEY))
             .call()
             .responseEntity(Answer.class);
 //        return new Answer(question.title(), answerText);
